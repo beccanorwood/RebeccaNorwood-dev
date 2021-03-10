@@ -1,0 +1,26 @@
+body {
+    background-image: url(blue.png); 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+}
+
+#temp {
+    top: 50%; 
+    left: 50%; 
+    text-align: center; 
+}
+
+#tbd {
+    font-size: 80px; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+
+.title {
+    display: none; 
+}
+

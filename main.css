@@ -1,0 +1,246 @@
+/*Lanscape Orientation CSS*/ 
+
+body {
+    background-image: url("blue.jpg"); 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+}
+
+div, #container_one, #container_two, #container_three, #container_four, .prof_pic {
+    backface-visibility: hidden; 
+}
+
+.prof_pic {
+    visibility: collapse;
+    position: absolute; 
+    width: 400px; 
+    height: 519px; 
+    left: 0;  
+    border-radius: 10%; 
+    padding: 15px;  
+}
+
+p {
+    visibility: hidden; 
+    position: absolute; 
+    left: 40%; 
+    top: 20%; 
+    font-size: 24px; 
+    padding-left: 10px; 
+    padding-right: 40px; 
+    text-align: center; 
+}
+
+#header{
+    width: 1150px; 
+    height: 90px; 
+    background: inherit; 
+    position: absolute; 
+    overflow: hidden; 
+    transition: height 0.6s; 
+    top: 25%; 
+    left: 50%;
+    margin-left: -555px;
+    margin-top: -50px;
+    border-radius: 8px; 
+}
+
+#header:before{
+    content: " "; 
+    width: 1150px; 
+    height: 90px;
+    background: inherit; 
+    position: absolute; 
+    box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3); 
+    filter: blur (10px);
+}
+
+
+#container_one {
+    width: 250px; 
+    height: 400px; 
+    background: inherit; 
+    position: absolute; 
+    transform: perspective(800px); 
+    transition: all 0.5; 
+    overflow: hidden; 
+    top: 50%; 
+    left: 50%; 
+    margin-left: -555px; 
+    margin-top: -250px; 
+    border-radius: 8px; 
+}
+
+#container_one:before {
+    content: " "; 
+    width: 300px; 
+    height: 450px; 
+    background: inherit; 
+    position: absolute; 
+    box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3); 
+    filter: blur(10px);
+}
+
+#container_two {
+    width: 250px; 
+    height: 400px; 
+    background: inherit; 
+    position: absolute; 
+    transform: perspective(800px); 
+    overflow: hidden; 
+    top: 50%; 
+    left: 50%; 
+    margin-left: -255px; 
+    margin-top: -250px; 
+    border-radius: 8px; 
+}
+
+#container_two:before {
+    content: " ";
+    width: 300px; 
+    height: 450px; 
+    background: inherit; 
+    position: absolute; 
+    box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3); 
+    filter: blur(10px); 
+}
+
+#container_three {
+    width: 250px; 
+    height: 400px; 
+    background: inherit; 
+    position: absolute; 
+    transform: perspective(800px); 
+    overflow: hidden; 
+    top: 50%; 
+    left: 50%; 
+    margin-left: 45px; 
+    margin-top: -250px; 
+    border-radius: 8px; 
+}
+
+#container_three:before{
+    content: " "; 
+    width: 300px; 
+    height: 450px; 
+    background: inherit; 
+    position: absolute; 
+    box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3); 
+    filter: blur(10px);
+}
+
+#container_four {
+    width: 250px; 
+    height: 400px; 
+    background: inherit; 
+    position: absolute; 
+    transform: perspective(800px); 
+    overflow: hidden; 
+    top: 50%; 
+    left: 50%; 
+    margin-left: 345px; 
+    margin-top: -250px; 
+    border-radius: 8px; 
+}
+
+#container_four:before{
+    content: " "; 
+    width: 300px; 
+    height: 450px; 
+    background: inherit; 
+    position: absolute; 
+    box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3); 
+    filter: blur(10px);
+}
+
+
+#one, #two, #three, #four{
+    font-size: 20px; 
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+    text-align: center; 
+    position: relative; 
+    left: 50%; 
+    top: 43%; 
+    transform: translate(-50%, -50%); 
+}
+
+#info {
+    font-size: 20px; 
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+    text-align: center; 
+    position: relative;
+    top: 10px; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+
+#container_one:hover #one, #container_two:hover #two, #container_three:hover #three, #container_four:hover #four{
+    transform: rotateX(180deg); 
+}
+
+.back, .back_two, .back_three, .back_four{
+    position: absolute; 
+    width: 250px;
+    height: 400px; 
+    top: 30%; 
+    left: 20%; 
+    transform: translate(-50%, -50%); 
+    transform: perspective(800px) rotateY(0deg); 
+    backface-visibility: hidden; 
+    transition: all 0.5s;
+    flex-direction: column; 
+    transform: rotateX(180deg); 
+}
+
+#container_one:hover .back, #container_two:hover .back_two, #container_three:hover .back_three, #container_four:hover .back_four {
+    transform: rotateX(0deg); 
+}
+
+
+/*Code that expands info header when moused over*/ 
+
+/*=========================================================*/ 
+
+#header:hover + .grid>div{
+    display: none; 
+}
+
+#header:hover #header #header:before{
+    position: relative; 
+    min-height: 530px; 
+    overflow: hidden; 
+}
+
+#header:hover, #header:before {
+    height: 90px;
+    box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3); 
+    filter: blur (10px);
+}
+
+#header:hover {
+    width: 1150px; 
+    height: 700px; 
+    top: 25%; 
+    left: 50%;
+    margin-left: -525px;
+    margin-top: -50px;
+    border-radius: 8px; 
+}
+
+#header:hover .prof_pic, #header:hover p{
+    visibility: visible; 
+}
+
+/*=========================================================*/ 
+
+
+/*Code that shows logo when profile pic is hovered*/ 
+
+/*=========================================================*/ 
+
+
+
